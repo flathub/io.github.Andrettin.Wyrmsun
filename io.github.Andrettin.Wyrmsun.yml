@@ -18,6 +18,16 @@ modules:
   - shared-modules/lua5.1/lua-5.1.5.json
   - shared-modules/physfs/physfs.json
 
+  - name: tolua++
+    buildsystem: cmake-ninja
+    sources:
+      - type: git
+        url: https://github.com/LuaDist/toluapp.git
+        tag: 1.0.93
+        commit: 9feb31ab8b97eda9561846508ee9e3a2caff8da7
+    cleanup:
+      - /bin/toluapp
+
   - name: sqlite3
     config-opts:
       - --enable-threadsafe
@@ -29,9 +39,9 @@ modules:
         url: https://sqlite.org/2021/sqlite-autoconf-3370000.tar.gz
         sha256: 731a4651d4d4b36fc7d21db586b2de4dd00af31fd54fb5a9a4b7f492057479f7
     cleanup:
-      - '/include'
-      - '/bin/sqlite3'
-      - '/lib/pkgconfig/sqlite3.pc'
+      - /include
+      - /bin/sqlite3
+      - /lib/pkgconfig/sqlite3.pc
 
   - name: boost
     buildsystem: simple
@@ -42,16 +52,6 @@ modules:
       - type: archive
         url: https://boostorg.jfrog.io/artifactory/main/release/1.69.0/source/boost_1_69_0.tar.bz2
         sha256: 8f32d4617390d1c2d16f26a27ab60d97807b35440d45891fa340fc2648b04406
-
-  - name: tolua++
-    buildsystem: cmake-ninja
-    sources:
-      - type: git
-        url: https://github.com/LuaDist/toluapp.git
-        tag: 1.0.93
-        commit: 9feb31ab8b97eda9561846508ee9e3a2caff8da7
-    cleanup:
-      - '/bin/toluapp'
 
   - name: wyrmgus
     buildsystem: cmake-ninja
