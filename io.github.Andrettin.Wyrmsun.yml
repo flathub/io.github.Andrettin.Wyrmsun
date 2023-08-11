@@ -69,7 +69,7 @@ modules:
         commit: 281ee8d89f7786889d241de437cb00b268c6a965
         x-checker-data:
           type: git
-          tag-pattern: ^([\d.]+)$
+          tag-pattern: ^(v[\d.]+)$
 
   - name: wyrmsun
     buildsystem: cmake-ninja
@@ -82,6 +82,6 @@ modules:
         commit: c5bb082b1232280490cbf6ddb542c9b6dc2b3fe4
         x-checker-data:
           type: git
-          tag-pattern: ^([\d.]+)$
+          tag-pattern: ^(v[\d.]+)$
       - type: patch
         path: appdata.patch
