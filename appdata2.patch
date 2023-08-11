@@ -41,3 +41,25 @@ index 6582441cad..5e16fd0362 100644
    </releases>
 +  <launchable type="desktop-id">wyrmsun.desktop</launchable>
  </component>
+
+From 5fd29a1d729f85c154ec1f6d02ab6df3303da895 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Matthias=20Mail=C3=A4nder?=
+Date: Wed, 18 Dec 2024 11:06:48 +0100
+Subject: [PATCH 3/3] Add latest release.
+
+---
+ linux/wyrmsun.appdata.xml | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/linux/wyrmsun.appdata.xml b/linux/wyrmsun.appdata.xml
+index 5e16fd0362..ca3e07bffa 100644
+--- a/linux/wyrmsun.appdata.xml
++++ b/linux/wyrmsun.appdata.xml
+@@ -44,6 +44,7 @@
+   </screenshots>
+   <url type="homepage">https://andrettin.github.io/</url>
+   <releases>
++    <release version="5.3.6" date="2022-08-02" />
+     <release version="5.3.5" date="2022-03-13" />
+   </releases>
+   <launchable type="desktop-id">wyrmsun.desktop</launchable>
