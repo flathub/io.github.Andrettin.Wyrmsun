@@ -1,6 +1,6 @@
 app-id: io.github.Andrettin.Wyrmsun
 runtime: org.kde.Platform
-runtime-version: '5.15-22.08'
+runtime-version: 5.15-22.08
 sdk: org.kde.Sdk
 command: wyrmsun
 rename-icon: wyrmsun
@@ -33,7 +33,7 @@ modules:
       - --enable-threadsafe
       - --enable-threads-override-locks
     build-options:
-        cflags: -DSQLITE_ENABLE_UNLOCK_NOTIFY=1
+      cflags: -DSQLITE_ENABLE_UNLOCK_NOTIFY=1
     sources:
       - type: archive
         url: https://sqlite.org/2021/sqlite-autoconf-3370000.tar.gz
@@ -65,8 +65,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Andrettin/Wyrmgus.git
-        tag: v5.3.5
-        commit: 281ee8d89f7786889d241de437cb00b268c6a965
+        tag: v5.3.6
+        commit: 52e716c1f9bc3938613e680d5492dfa11b7dc215
         x-checker-data:
           type: git
           tag-pattern: ^(v[\d.]+)$
