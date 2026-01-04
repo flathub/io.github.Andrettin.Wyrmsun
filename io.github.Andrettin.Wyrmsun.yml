@@ -1,6 +1,6 @@
 app-id: io.github.Andrettin.Wyrmsun
 runtime: org.kde.Platform
-runtime-version: '5.15-23.08'
+runtime-version: '5.15-25.08'
 sdk: org.kde.Sdk
 command: wyrmsun
 rename-icon: wyrmsun
@@ -20,6 +20,8 @@ modules:
 
   - name: tolua++
     buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/LuaDist/toluapp.git
@@ -53,28 +55,16 @@ modules:
         url: https://archives.boost.io/release/1.69.0/source/boost_1_69_0.tar.bz2
         sha256: 8f32d4617390d1c2d16f26a27ab60d97807b35440d45891fa340fc2648b04406
 
-  - name: wyrmgus
+  - name: wyrmsun
     buildsystem: cmake-ninja
     config-opts:
+      - -DBIN_DIR=bin
       - -DWITH_TEST=OFF
       - -DENABLE_STATIC=OFF
       - -DOpenGL_GL_PREFERENCE=GLVND
       - -DWITH_GEOJSON=OFF
       - -DGAMEDIR=/app/bin
       - -DENABLE_USEGAMEDIR=OFF
-    sources:
-      - type: git
-        url: https://github.com/Andrettin/Wyrmgus.git
-        tag: v5.3.5
-        commit: 281ee8d89f7786889d241de437cb00b268c6a965
-        x-checker-data:
-          type: git
-          tag-pattern: ^(v[\d.]+)$
-
-  - name: wyrmsun
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DBIN_DIR=bin
     sources:
       - type: git
         url: https://github.com/Andrettin/Wyrmsun.git
