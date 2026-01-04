@@ -68,12 +68,10 @@ modules:
     sources:
       - type: git
         url: https://github.com/Andrettin/Wyrmsun.git
-        tag: v5.3.5
-        commit: c5bb082b1232280490cbf6ddb542c9b6dc2b3fe4
+        tag: v5.3.6
+        commit: 02c22ba0c32e59590b4a56b64e5f652c676446c3
         x-checker-data:
           type: git
           tag-pattern: ^(v[\d.]+)$
       - type: patch
-        path: appdata.patch
-      - type: patch
-        path: appdata2.patch
+        path: fix-appdata.patch
