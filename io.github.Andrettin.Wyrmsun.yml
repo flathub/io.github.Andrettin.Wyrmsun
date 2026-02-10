@@ -13,7 +13,14 @@ finish-args:
   - --socket=x11
   - --socket=pulseaudio
   - --persist=.stratagus
-
+cleanup:
+  - /include
+  - /lib/cmake
+  - /lib/pkgconfig
+  - /share/aclocal
+  - /share/man
+  - '*.la'
+  - '*.a'
 modules:
   - shared-modules/lua5.1/lua-5.1.5.json
   - shared-modules/physfs/physfs.json
