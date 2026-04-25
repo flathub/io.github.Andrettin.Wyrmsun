@@ -28,21 +28,6 @@ modules:
     cleanup:
       - /bin/toluapp
 
-  - name: sqlite3
-    config-opts:
-      - --enable-threadsafe
-      - --enable-threads-override-locks
-    build-options:
-        cflags: -DSQLITE_ENABLE_UNLOCK_NOTIFY=1
-    sources:
-      - type: archive
-        url: https://sqlite.org/2021/sqlite-autoconf-3370000.tar.gz
-        sha256: 731a4651d4d4b36fc7d21db586b2de4dd00af31fd54fb5a9a4b7f492057479f7
-    cleanup:
-      - /include
-      - /bin/sqlite3
-      - /lib/pkgconfig/sqlite3.pc
-
   - name: boost
     buildsystem: simple
     build-commands:
