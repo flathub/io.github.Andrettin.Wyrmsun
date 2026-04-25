@@ -40,12 +40,12 @@ modules:
   - name: boost
     buildsystem: simple
     build-commands:
-      - ./bootstrap.sh --prefix=${FLATPAK_DEST} --with-libraries=date_time
+      - ./bootstrap.sh --prefix=${FLATPAK_DEST}
       - ./b2 -j${FLATPAK_BUILDER_N_JOBS} install variant=release cxxstd=11 --layout=system
     sources:
       - type: archive
-        url: https://archives.boost.io/release/1.69.0/source/boost_1_69_0.tar.bz2
-        sha256: 8f32d4617390d1c2d16f26a27ab60d97807b35440d45891fa340fc2648b04406
+        url: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2
+        sha256: 85a33fa22621b4f314f8e85e1a5e2a9363d22e4f4992925d4bb3bc631b5a0c7a
 
   - name: wyrmgus
     buildsystem: cmake-ninja
@@ -59,8 +59,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Andrettin/Wyrmgus.git
-        tag: v5.3.5
-        commit: 281ee8d89f7786889d241de437cb00b268c6a965
+        tag: v5.3.6
+        commit: 52e716c1f9bc3938613e680d5492dfa11b7dc215
         x-checker-data:
           type: git
           tag-pattern: ^(v[\d.]+)$
@@ -72,8 +72,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Andrettin/Wyrmsun.git
-        tag: v5.3.5
-        commit: c5bb082b1232280490cbf6ddb542c9b6dc2b3fe4
+        tag: v5.3.6
+        commit: 02c22ba0c32e59590b4a56b64e5f652c676446c3
         x-checker-data:
           type: git
           tag-pattern: ^(v[\d.]+)$
