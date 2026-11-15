@@ -71,6 +71,4 @@ modules:
           type: git
           tag-pattern: ^(v[\d.]+)$
       - type: patch
-        path: appdata.patch
-      - type: patch
         path: appdata2.patch
